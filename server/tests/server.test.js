@@ -22,6 +22,7 @@ beforeEach(done => {
   }).then(() => done());
 });
 
+//add todo
 describe('POST /todos', () => {
   it('should create a new todo', done => {
     let text = 'Booty cheeks';
@@ -60,6 +61,7 @@ describe('POST /todos', () => {
   });
 });
 
+//get all todos
 describe('GET /todos', () => {
   it('should get all todos', done => {
     request(app)
@@ -72,6 +74,7 @@ describe('GET /todos', () => {
   });
 });
 
+//get a single todo by id
 describe('GET /todos/:id', () => {
   it('should return todo doc', done => {
     request(app)
@@ -98,6 +101,7 @@ describe('GET /todos/:id', () => {
   });
 });
 
+//delete todo by id
 describe('DELETE /todos/id', () => {
   it('should remove a todo', done => {
     let hexId = todos[1]._id.toHexString();
